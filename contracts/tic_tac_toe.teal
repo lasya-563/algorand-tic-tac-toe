@@ -1,0 +1,21 @@
+#pragma version 5
+
+txn ApplicationID
+int 0
+==
+bnz init
+
+txn OnCompletion
+int NoOp
+==
+bnz play_move
+
+err
+
+init:
+int 1
+return
+
+play_move:
+int 1
+return
